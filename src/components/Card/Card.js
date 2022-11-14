@@ -3,8 +3,8 @@ import './Card.css'
 
 const Card = ({from, to, price, name}) => {
 	return (
-		<div className = "card"> 
-			<article className="br2 ba dark-gray b--black-10 mv4 mw5 center">
+		<div className = ""> 
+			<article className="br2 ba dark-gray b--black-10 mv4 mw5 center card">
 			  <img src="http://placekitten.com/g/600/300" className="db w-100 br2 br--top" alt="Photo of a kitten looking menacing."/>
 			  <div className="pa2 ph3-ns pb3-ns">
 			    <div className="dt w-100 mt1">
