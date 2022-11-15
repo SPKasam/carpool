@@ -13,6 +13,10 @@ const App = () => {
 
   const [location, setLocation] = useState("UTD");
   const [page, setPage] = useState("home");
+  const [postList, setPostList] = useState([
+
+
+  ])
 
   useEffect(() => {}, [location,page])
 
@@ -43,7 +47,7 @@ const App = () => {
             </div>
             <NewPost/> 
           </div>
-        }        
+        }
     </div>
   );
 }
