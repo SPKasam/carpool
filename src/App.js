@@ -101,7 +101,7 @@ const App = () => {
             <div className = "topright">
               <HomeBtn setPage={setPage}/>
             </div>
-            <NewPost/>
+            <NewPost setPage = {setPage} utdPosts = {utdPosts} setUtdPosts = {setUtdPosts} otherPosts = {otherPosts} setOtherPosts = {setOtherPosts} />
           </div>
         }
     </div>
