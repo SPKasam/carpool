@@ -25,7 +25,7 @@ class App extends Component {
     return (
       <div>
           <h1 className = "tc courier pt2"> UTD Carpool </h1>
-          <div className = "flex justify-center pt2"> 
+          <div className = "flex justify-center pt2 pb3"> 
             <FromButton onButtonClick={this.onButtonClick}/>
             <ToButton onButtonClick={this.onButtonClick}/>
           </div>
