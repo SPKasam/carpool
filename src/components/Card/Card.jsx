@@ -1,9 +1,9 @@
 import React from 'react';
 import './Card.css'
 
-const Card = ({from, to, price, name}) => {
+const Card = ({from, to, price, name, description}) => {
 	return (
-		<div className = ""> 
+		<div className = "">
 			<article className="br2 ba dark-gray b--black-10 mv4 mw5 center card">
 			  <img src="http://placekitten.com/g/600/300" className="db w-100 br2 br--top" alt="kitten looking menacing."/>
 			  <div className="pa2 ph3-ns pb3-ns">
@@ -16,7 +16,7 @@ const Card = ({from, to, price, name}) => {
 			      </div>
 			    </div>
 			    <p className="f6 lh-copy measure mt2 mid-gray">
-			      Hi, I'm {name}, nice to meet you. I'm a senior at UTD studying computer science...
+			      {description}
 			    </p>
 			  </div>
 			</article>

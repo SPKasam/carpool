@@ -1,7 +1,12 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 
 
 const NewPost = () => {
+
+
+
+
+
   return (
     <div className = "pl6 pt4">
         <div className="measure">
@@ -89,6 +94,13 @@ const NewPost = () => {
             </small>
         </div>
 
+        <div className = "pt3">
+    			<input
+    		        className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
+    		        type="submit"
+    		        value="Post"
+    		    />
+    		</div>
     </div>
   )
 }

@@ -18,25 +18,29 @@ const App = () => {
       from: "UTD",
       to: "Austin" ,
       price: "20",
-      name: "Robin"
+      name: "Robin",
+      description: "Hello there, nice to meet you. I'm a senior at UTD studying computer science..."
     },
     {
       from: "UTD",
       to: "Houston" ,
       price: "15",
-      name: "Jack"
+      name: "Jack",
+      description: "Hello there, nice to meet you. I'm a senior at UTD studying computer science..."
     },
     {
       from: "UTD",
       to: "College Station" ,
       price: "22",
-      name: "Daniel"
+      name: "Daniel",
+      description: "Hello there, nice to meet you. I'm a senior at UTD studying computer science..."
     },
     {
       from: "UTD",
       to: "Round Rock" ,
       price: "19",
-      name: "Sam"
+      name: "Sam",
+      description: "Hello there, nice to meet you. I'm a senior at UTD studying computer science..."
     }
   ])
   const [otherPosts, setOtherPosts] = useState([
@@ -44,29 +48,33 @@ const App = () => {
       from: "Austin",
       to: "UTD" ,
       price: "20",
-      name: "Robin"
+      name: "Robin",
+      description: "Hello there, nice to meet you. I'm a senior at UTD studying computer science..."
     },
     {
       from: "Houston",
       to: "UTD" ,
       price: "18",
-      name: "Robin"
+      name: "Robin",
+      description: "Hello there, nice to meet you. I'm a senior at UTD studying computer science..."
     },
     {
       from: "Round Rock",
       to: "UTD" ,
       price: "20",
-      name: "Robin"
+      name: "Robin",
+      description: "Hello there, nice to meet you. I'm a senior at UTD studying computer science..."
     },
     {
       from: "College Station",
       to: "UTD" ,
       price: "22",
-      name: "Robin"
+      name: "Robin",
+      description: "Hello there, nice to meet you. I'm a senior at UTD studying computer science..."
     },
   ])
 
-  useEffect(() => {}, [location,page])
+  useEffect(() => {}, [location,page, utdPosts, otherPosts])
 
   return (
     <div>

@@ -14,6 +14,7 @@ const FromUtdCardList = ({posts}) => {
 								to = {posts[i].to}
 								price = {posts[i].price}
 								name = {posts[i].name}
+								description = {posts[i].description}
 								/>
 						);
 				})
