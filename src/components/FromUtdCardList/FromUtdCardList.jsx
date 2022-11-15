@@ -1,15 +1,24 @@
 import React from 'react';
-import Card from '../Card/Card';
+import Card from '../Card/Card.jsx';
 import './FromUtdCardList.css'
 
-const FromUtdCardList = () => {
+const FromUtdCardList = ({posts}) => {
 	return (
-		<div className = "cards"> 
-			<Card from="UTD" to="Austin" price="$20" name="Robin"/>
-			<Card from="UTD" to="Houston" price="$20" name="Jack"/>
-			<Card from="UTD" to="College Station" price="$20" name="Daniel"/>
-			<Card from="UTD" to="Round Rock" price="$20" name="Samantha"/>
-	    </div>
+		<div className = "cards">
+			{
+				posts.map((user,i) => {
+					return (
+							<Card
+								key = {i}
+								from = {posts[i].from}
+								to = {posts[i].to}
+								price = {posts[i].price}
+								name = {posts[i].name}
+								/>
+						);
+				})
+			}
+	  </div>
 	)
 }
 
