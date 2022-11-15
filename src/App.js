@@ -4,6 +4,7 @@ import ToButton from './components/ToButton';
 import FromUtdCardList from './components/FromUtdCardList/FromUtdCardList';
 import ToUtdCardList from './components/ToUtdCardList/ToUtdCardList';
 import CreatePostBtn from './components/CreatePostBtn';
+import HomeBtn from './components/HomeBtn';
 import NewPost from './components/NewPost/NewPost';
 import React, {useState, useEffect} from 'react';
 
@@ -21,7 +22,7 @@ const App = () => {
         {
           (page === "home") ? 
           <div>
-          <div className = "createpost">
+          <div className = "topright">
             <CreatePostBtn setPage={setPage}/>
           </div>
           <div className = "flex justify-center pt2 pb3"> 
@@ -36,7 +37,12 @@ const App = () => {
           }
           </div>
           : 
-          <NewPost/> 
+          <div>
+            <div className = "topright">
+              <HomeBtn setPage={setPage}/>
+            </div>
+            <NewPost/> 
+          </div>
         }        
     </div>
   );
