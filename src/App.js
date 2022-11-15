@@ -3,44 +3,38 @@ import FromButton from './components/FromButton';
 import ToButton from './components/ToButton';
 import FromUtdCardList from './components/FromUtdCardList/FromUtdCardList';
 import ToUtdCardList from './components/ToUtdCardList/ToUtdCardList';
-import React, {Component} from 'react';
+import React, {useState, useEffect} from 'react';
 
 
-class App extends Component {
+const App = () => {
 
-  constructor() {
-    super();
-    this.state = {
-      location: "UTD"
-    }
-  }
+  const [location, setLocation] = useState("UTD");
 
-  onButtonClick = (loc) => {
-    this.setState({
-      location: loc
-    })
+  const onButtonClick = (loc) => {
+    setLocation(loc);
   } 
 
-  render() {
-    return (
-      <div>
-          <h1 className = "tc courier pt2"> UTD Carpool </h1>
-          <div className = "flex justify-center pt2 pb3"> 
-            <FromButton onButtonClick={this.onButtonClick}/>
-            <ToButton onButtonClick={this.onButtonClick}/>
-          </div>
-          {
-            (this.state.location === "UTD") ?
-            <FromUtdCardList/>
-            :
-            <ToUtdCardList/>
-          }
-          
-          
-      </div>
-    );
-  }
+  useEffect(() => {
 
+  }, [location])
+
+  return (
+    <div>
+        <h1 className = "tc courier pt2"> UTD Carpool </h1>
+        <div className = "flex justify-center pt2 pb3"> 
+          <FromButton onButtonClick={onButtonClick}/>
+          <ToButton onButtonClick={onButtonClick}/>
+        </div>
+        {
+          (location === "UTD") ?
+          <FromUtdCardList/>
+          :
+          <ToUtdCardList/>
+        }
+        
+        
+    </div>
+  );
 }
 
 export default App;
