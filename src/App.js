@@ -6,6 +6,7 @@ import ToUtdCardList from './components/ToUtdCardList/ToUtdCardList';
 import CreatePostBtn from './components/CreatePostBtn';
 import HomeBtn from './components/HomeBtn';
 import NewPost from './components/NewPost/NewPost';
+import Intro from './components/Intro/Intro';
 import React, {useState, useEffect} from 'react';
 
 
@@ -78,6 +79,7 @@ const App = () => {
 
   return (
     <div>
+        <Intro/>
         <h1 className = "title tc courier pt2"> UTD Carpool </h1>
         {
           (page === "home") ?
