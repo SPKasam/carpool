@@ -82,10 +82,10 @@ const App = () => {
 
   return (
     <div>
+        <Intro/>
         {
           (page === "home") ?
           <div>
-            <Intro/>
             <h1 className="title"> To explore rides, choose a city! </h1>
             <CityCardslist setCity={setCity} setPage={setPage}/>
           </div>

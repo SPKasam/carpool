@@ -3,8 +3,8 @@ import "./CityPage.css";
 
 const CityPage = ({city}) => {
 	return(
-		<div>
-			<h1>Welcome to {city} carpooling!</h1>
+		<div className="epage">
+			<h1 className="title">Welcome to {city} carpooling!</h1>
 		</div>
 	)
 }
