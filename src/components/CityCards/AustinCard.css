@@ -1,0 +1,11 @@
+.image-slot{
+	height: 435px;
+	width: 280px;
+}
+
+.image{
+	border-radius: 10px;
+	width:100%;
+  	height:100%;
+  	object-fit:cover;
+}
