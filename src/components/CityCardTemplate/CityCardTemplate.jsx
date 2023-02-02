@@ -1,8 +1,7 @@
 import React from 'react';
-import "./AustinCard.css";
-import Image from './austinda.jpeg';
+import "./CityCardTemplate.css";
 
-const AustinCard = () => {
+const CityCardTemplate = ({Image}) => {
 	return (
 		<div>
 			<div className="image-slot">
@@ -12,4 +11,4 @@ const AustinCard = () => {
 	)
 }
 
-export default AustinCard;
+export default CityCardTemplate;

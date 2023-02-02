@@ -8,7 +8,7 @@ import HomeBtn from './components/HomeBtn';
 import NewPost from './components/NewPost/NewPost';
 import Intro from './components/Intro/Intro';
 import React, {useState, useEffect} from 'react';
-import AustinCityCard from './components/CityCards/AustinCard';
+import CityCardslist from './components/CityCardsList/CityCardsList';
 
 
 const App = () => {
@@ -81,8 +81,9 @@ const App = () => {
   return (
     <div>
         <Intro/>
-        <div className="everythingelse">
-          <h1 className = "title tc pt2"> Explore Rides! </h1>
+        <h1 className="title"> To explore rides, choose a city! </h1>
+        <CityCardslist/>
+{/*        <div className="everythingelse">
           {
             (page === "home") ?
             <div>
@@ -95,7 +96,7 @@ const App = () => {
             </div>
             {
               (location === "UTD") ?
-              <FromUtdCardList posts = {utdPosts}/>
+              <FromUtdCardList className="fromutd" posts = {utdPosts}/>
               :
               <ToUtdCardList posts = {otherPosts}/>
             }
@@ -108,7 +109,7 @@ const App = () => {
               <NewPost setPage = {setPage} utdPosts = {utdPosts} setUtdPosts = {setUtdPosts} otherPosts = {otherPosts} setOtherPosts = {setOtherPosts} />
             </div>
           }
-        </div>
+        </div>*/}
     </div>
   );
 }
