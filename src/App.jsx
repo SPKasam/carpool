@@ -8,6 +8,7 @@ import HomeBtn from './components/HomeBtn';
 import NewPost from './components/NewPost/NewPost';
 import Intro from './components/Intro/Intro';
 import React, {useState, useEffect} from 'react';
+import AustinCityCard from './components/CityCards/AustinCard';
 
 
 const App = () => {
@@ -80,32 +81,34 @@ const App = () => {
   return (
     <div>
         <Intro/>
-        <h1 className = "title tc pt2"> Explore Rides! </h1>
-        {
-          (page === "home") ?
-          <div>
-          <div className = "topright">
-            <CreatePostBtn setPage={setPage}/>
-          </div>
-          <div className = "flex justify-center pt2 pb3">
-            <FromButton setLocation={setLocation}/>
-            <ToButton setLocation={setLocation}/>
-          </div>
+        <div className="everythingelse">
+          <h1 className = "title tc pt2"> Explore Rides! </h1>
           {
-            (location === "UTD") ?
-            <FromUtdCardList posts = {utdPosts}/>
-            :
-            <ToUtdCardList posts = {otherPosts}/>
-          }
-          </div>
-          :
-          <div>
+            (page === "home") ?
+            <div>
             <div className = "topright">
-              <HomeBtn setPage={setPage}/>
+              <CreatePostBtn setPage={setPage}/>
             </div>
-            <NewPost setPage = {setPage} utdPosts = {utdPosts} setUtdPosts = {setUtdPosts} otherPosts = {otherPosts} setOtherPosts = {setOtherPosts} />
-          </div>
-        }
+            <div className = "flex justify-center pt2 pb3">
+              <FromButton setLocation={setLocation}/>
+              <ToButton setLocation={setLocation}/>
+            </div>
+            {
+              (location === "UTD") ?
+              <FromUtdCardList posts = {utdPosts}/>
+              :
+              <ToUtdCardList posts = {otherPosts}/>
+            }
+            </div>
+            :
+            <div>
+              <div className = "topright">
+                <HomeBtn setPage={setPage}/>
+              </div>
+              <NewPost setPage = {setPage} utdPosts = {utdPosts} setUtdPosts = {setUtdPosts} otherPosts = {otherPosts} setOtherPosts = {setOtherPosts} />
+            </div>
+          }
+        </div>
     </div>
   );
 }

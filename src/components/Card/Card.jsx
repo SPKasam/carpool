@@ -8,20 +8,34 @@ import rr from './rrda.png';
 
 const Card = ({from, to, price, name, description}) => {
 	var image;
-    switch(to) {
-      case 'Austin':
-        image = austin
-        break
-      case 'Houston':
-        image = houston
-        break;
-      case 'College Station':
-        image = cstat
-        break;
-      case 'Round Rock':
-        image = rr
-        break;
-    }
+  switch(to) {
+    case 'Austin':
+      image = austin
+      break
+    case 'Houston':
+      image = houston
+      break;
+    case 'College Station':
+      image = cstat
+      break;
+    case 'Round Rock':
+      image = rr
+      break;
+  }
+  switch(from) {
+    case 'Austin':
+      image = austin
+      break
+    case 'Houston':
+      image = houston
+      break;
+    case 'College Station':
+      image = cstat
+      break;
+    case 'Round Rock':
+      image = rr
+      break;
+  }
 	return (
 		<div className="card pa2">
 			<div className="imageslot">
