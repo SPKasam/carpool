@@ -9,12 +9,14 @@ import NewPost from './components/NewPost/NewPost';
 import Intro from './components/Intro/Intro';
 import React, {useState, useEffect} from 'react';
 import CityCardslist from './components/CityCardsList/CityCardsList';
+import CityPage from './components/CityPage/CityPage';
 
 
 const App = () => {
 
   const [location, setLocation] = useState("UTD");
   const [page, setPage] = useState("home");
+  const [city,setCity] = useState("");
   const [utdPosts, setUtdPosts] = useState([
     {
       from: "UTD",
@@ -80,9 +82,21 @@ const App = () => {
 
   return (
     <div>
-        <Intro/>
-        <h1 className="title"> To explore rides, choose a city! </h1>
-        <CityCardslist/>
+        {
+          (page === "home") ?
+          <div>
+            <Intro/>
+            <h1 className="title"> To explore rides, choose a city! </h1>
+            <CityCardslist setCity={setCity} setPage={setPage}/>
+          </div>
+          :
+          <CityPage city={city}/>
+            
+          
+          
+        }
+        
+        
 {/*        <div className="everythingelse">
           {
             (page === "home") ?

@@ -7,13 +7,34 @@ import cstat_image from "./cstatda.png";
 import roundrock_image from "./rrda.png";
 
 
-const CityCardsList = () => {
+
+const CityCardsList = ({setCity, setPage}) => {
 	return(
 		<div className="cardsList">
-			<CityCardTemplate Image={austin_image}/>
-			<CityCardTemplate Image={houston_image}/>
-			<CityCardTemplate Image={cstat_image}/>
-			<CityCardTemplate Image={roundrock_image}/>
+			<CityCardTemplate 
+				Image={austin_image}
+				setPage={setPage}
+				setCity={setCity}
+				cityName='Austin'
+			/>
+			<CityCardTemplate 
+				Image={houston_image}
+				setPage={setPage}
+				setCity={setCity}
+				cityName='Houston'
+			/>
+			<CityCardTemplate 
+				Image={cstat_image}
+				setPage={setPage}
+				setCity={setCity}
+				cityName='College Station'
+			/>
+			<CityCardTemplate 
+				Image={roundrock_image}
+				setPage={setPage}
+				setCity={setCity}
+				cityName='Round Rock'
+			/>
 		</div>
 	)
 }
