@@ -80,7 +80,7 @@ const App = () => {
   return (
     <div>
         <Intro/>
-        <h1 className = "title tc courier pt2"> UTD Carpool </h1>
+        <h1 className = "title tc pt2"> Explore Rides! </h1>
         {
           (page === "home") ?
           <div>
