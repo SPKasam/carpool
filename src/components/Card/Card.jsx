@@ -1,9 +1,9 @@
 import React from 'react';
 import './Card.css';
-import austin from './austin.png';
-import houston from './houston.png';
-import cstat from './college-station.png';
-import rr from './round rock.png';
+import austin from './austinda.jpeg';
+import houston from './houstonda.jpeg';
+import cstat from './cstatda.png';
+import rr from './rrda.png';
 
 
 const Card = ({from, to, price, name, description}) => {
@@ -27,7 +27,7 @@ const Card = ({from, to, price, name, description}) => {
 			<div className="imageslot">
 				<img className="image" src={image}/>
 			</div>
-			<div className="container">
+			{/*<div className="container">
 				<div className="firstline">
 			    	<h4><b>{from} to {to}</b></h4>
 			    	<h4 className='pr3'><b>${price}</b></h4>
@@ -36,7 +36,7 @@ const Card = ({from, to, price, name, description}) => {
 				    <h4>- Driver: {name}</h4>
 				    <h4>- Description: {description}</h4>
 			    </div>
-			</div>
+			</div>*/}
 		</div>
 	);
 }
