@@ -4,9 +4,11 @@ import austin from './austinda.jpeg';
 import houston from './houstonda.jpeg';
 import cstat from './cstatda.png';
 import rr from './rrda.png';
+import guy from './wiicharacter.jpeg';
 
 
-const Card = ({from, to, price, name, description}) => {
+const Card = ({from, to, price, name, description, type}) => {
+	console.log({from, to, price, name, description, type})
 	var image;
   switch(to) {
     case 'Austin':
@@ -36,24 +38,47 @@ const Card = ({from, to, price, name, description}) => {
       image = rr
       break;
   }
+  if (type === "driver")
+  {
+	  image = guy
+  }
+
 	return (
-		<div className="card pa2">
-			<div className="imageslot">
-				<img className="image" src={image}/>
+		<div>
+			{type === "driver" ? (
+
+						<div className="card pa2">
+						<div className="imageslot">
+							<img className="image" src={image}/>
+						</div>
+						<div className="container">
+							<div className="firstline">
+								<h4><b>{from} to {to}</b></h4>
+								<h4 className='pr3'><b>${price}</b></h4>
+							</div>
+							<div className="body pt3">
+								<h4>- Driver: {name}</h4>
+								<h4>- Description: {description}</h4>
+							</div>
+						</div>
+					</div>
+
+
+
+			) : (
+
+				<div className="card pa2">
+				<div className="imageslot">
+					<img className="image" src={image}/>
+				</div>
 			</div>
-			{/*<div className="container">
-				<div className="firstline">
-			    	<h4><b>{from} to {to}</b></h4>
-			    	<h4 className='pr3'><b>${price}</b></h4>
-			    </div>
-			    <div className="body pt3">
-				    <h4>- Driver: {name}</h4>
-				    <h4>- Description: {description}</h4>
-			    </div>
-			</div>*/}
+
+			)
+		}
 		</div>
 	);
 }
+
 
 export default Card;
 

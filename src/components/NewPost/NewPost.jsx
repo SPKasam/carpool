@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 
 
-const NewPost = ({setPage, utdPosts, setUtdPosts, otherPosts, setOtherPosts}) => {
+const NewPost = ({setPage, data, setData}) => {
 
   const [name, setName] = useState("");
   const [from, setFrom] = useState("");
@@ -17,12 +17,8 @@ const NewPost = ({setPage, utdPosts, setUtdPosts, otherPosts, setOtherPosts}) =>
       price: price,
       description: desc
     }
-    if (from.toLowerCase() === "utd"){
-      setUtdPosts(utdPosts => [...utdPosts,post])
-    }
-    else{
-      setOtherPosts(otherPosts =>[...otherPosts,post])
-    }
+
+    setData(data => [...data,post])
     setPage("home")
   }
 
