@@ -32,7 +32,7 @@ const CityPage = ({city, data, toUTD}) => {
 	return(
 		<div>
 		<div>
-			<h1 className="title">Welcome to {city} carpooling!</h1>
+			<h1 className="title newfont">Welcome to {city} carpooling!</h1>
 		</div>
 		<div className="cardsdisplay">
 			{

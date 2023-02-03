@@ -118,7 +118,7 @@ const App = () => {
     <div>   
         <Intro/>
             <div>
-              <h1 className="title"> To explore rides, choose a city! </h1>
+              <h1 className="title newfont"> To explore rides, choose a city! </h1>
               <div className = "topright">
 
                 <CreatePostBtn setPage={setPage}/>

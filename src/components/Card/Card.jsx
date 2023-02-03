@@ -1,9 +1,5 @@
 import React from 'react';
 import './Card.css';
-import austin from './austinda.jpeg';
-import houston from './houstonda.jpeg';
-import cstat from './cstatda.png';
-import rr from './rrda.png';
 import guy from './wiicharacter.jpeg';
 
 
@@ -15,7 +11,7 @@ const Card = ({from, to, price, name, description, type}) => {
 	  image = guy
   }
   	return (
-		<div className = "">
+		<div className = "pa2">
 			<article className="br2 ba dark-gray b--black-10 mv4 mw5 center card">
 				<img src="http://placekitten.com/g/600/300" className="db w-100 br2 br--top" alt="kitten looking menacing."/>
 				<div className="pa2 ph3-ns pb3-ns">
