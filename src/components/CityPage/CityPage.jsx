@@ -10,7 +10,7 @@ const CityPage = ({city, data, toUTD}) => {
 		console.log("filtering data")
 		for (let i = 0; i < data.length; i++)
 		{
-			if (toUTD == false)
+			if (toUTD === false)
 			{
 				if (data[i]["to"] === city)
 				{
@@ -31,10 +31,10 @@ const CityPage = ({city, data, toUTD}) => {
 	filterData(data)
 	return(
 		<div>
-		<div className="epage">
+		<div>
 			<h1 className="title">Welcome to {city} carpooling!</h1>
 		</div>
-		<div>
+		<div className="cardsdisplay">
 			{
 				currData.map((user,i) => {
 					return (
