@@ -54,41 +54,6 @@ const App = () => {
     },
     {
       from: "UTD",
-      to: "Austin" ,
-      price: "20",
-      name: "Roberto",
-      description: "Hello there, nice to meet you. I'm a senior at UTD studying computer science..."
-    },
-    {
-      from: "UTD",
-      to: "Austin" ,
-      price: "20",
-      name: "Pauline",
-      description: "Hello there, nice to meet you. I'm a senior at UTD studying computer science..."
-    },
-    {
-      from: "UTD",
-      to: "Austin" ,
-      price: "20",
-      name: "Charizard",
-      description: "Hello there, nice to meet you. I'm a senior at UTD studying computer science..."
-    },
-    {
-      from: "UTD",
-      to: "Austin" ,
-      price: "20",
-      name: "Bulbasaur",
-      description: "Hello there, nice to meet you. I'm a senior at UTD studying computer science..."
-    },
-    {
-      from: "UTD",
-      to: "Austin" ,
-      price: "20",
-      name: "Pikachu",
-      description: "Hello there, nice to meet you. I'm a senior at UTD studying computer science..."
-    },
-    {
-      from: "UTD",
       to: "Houston" ,
       price: "15",
       name: "Jack",
@@ -118,7 +83,7 @@ const App = () => {
     <div>   
         <Intro/>
             <div>
-              <h1 className="title newfont"> To explore rides, choose a city! </h1>
+              <h1 className="title"> To explore rides, choose a city! </h1>
               <div className = "topright">
 
                 <CreatePostBtn setPage={setPage}/>

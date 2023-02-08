@@ -54,41 +54,6 @@ const App = () => {
     },
     {
       from: "UTD",
-      to: "Austin" ,
-      price: "20",
-      name: "Roberto",
-      description: "Hello there, nice to meet you. I'm a senior at UTD studying computer science..."
-    },
-    {
-      from: "UTD",
-      to: "Austin" ,
-      price: "20",
-      name: "Pauline",
-      description: "Hello there, nice to meet you. I'm a senior at UTD studying computer science..."
-    },
-    {
-      from: "UTD",
-      to: "Austin" ,
-      price: "20",
-      name: "Charizard",
-      description: "Hello there, nice to meet you. I'm a senior at UTD studying computer science..."
-    },
-    {
-      from: "UTD",
-      to: "Austin" ,
-      price: "20",
-      name: "Bulbasaur",
-      description: "Hello there, nice to meet you. I'm a senior at UTD studying computer science..."
-    },
-    {
-      from: "UTD",
-      to: "Austin" ,
-      price: "20",
-      name: "Pikachu",
-      description: "Hello there, nice to meet you. I'm a senior at UTD studying computer science..."
-    },
-    {
-      from: "UTD",
       to: "Houston" ,
       price: "15",
       name: "Jack",
@@ -110,6 +75,47 @@ const App = () => {
     }
   ])
 
+<<<<<<< HEAD
+  useEffect(() => {}, [location,page, utdPosts, otherPosts])
+
+  return (
+    <div className="app">
+        <Intro/>
+        <HomeBtn setPage={setPage}/>
+        {
+          (page === "home") ?
+          <div>
+            <h1 className="title"> To explore rides, choose a city! </h1>
+            <CityCardslist setCity={setCity} setPage={setPage}/>
+          </div>
+          :
+          <CityPage city={city}/>
+            
+          
+          
+        }
+        
+        
+{/*        <div className="everythingelse">
+          {
+            (page === "home") ?
+            <div>
+            <div className = "topright">
+              <CreatePostBtn setPage={setPage}/>
+            </div>
+            <div className = "flex justify-center pt2 pb3">
+              <FromButton setLocation={setLocation}/>
+              <ToButton setLocation={setLocation}/>
+            </div>
+            {
+              (location === "UTD") ?
+              <FromUtdCardList className="fromutd" posts = {utdPosts}/>
+              :
+              <ToUtdCardList posts = {otherPosts}/>
+            }
+            </div>
+            :
+=======
   // useEffect(() => {}, [location,page, utdPosts, otherPosts])
   let overallPageData; 
   if (page === "home") // home
@@ -117,8 +123,9 @@ const App = () => {
     overallPageData =  
     <div>   
         <Intro/>
+>>>>>>> createpostanddata
             <div>
-              <h1 className="title newfont"> To explore rides, choose a city! </h1>
+              <h1 className="title"> To explore rides, choose a city! </h1>
               <div className = "topright">
 
                 <CreatePostBtn setPage={setPage}/>
