@@ -4,20 +4,29 @@ import Mountains from './blurredmountains.png';
 
 const Intro = () => {
   return (
-    <div 
-      style={{ 
-        backgroundImage:`url(${Mountains})`,
-        backgroundRepeat:"no-repeat",
-        backgroundSize:"contain",
-        height: 960,
-        width: '100%'
-      }}>
+    <div className="bodydiv">
       <div className='introTitle'>
         <h1 className="textformat">Welcome to Pooly,</h1>
         <h1 className="textformat">the inter-city carpool platform for students</h1>
       </div>
-
     </div>
+
+    // <div 
+    //   style={{ 
+    //     backgroundImage:`url(${Mountains})`,
+    //     backgroundRepeat:"no-repeat",
+        
+    //     backgroundAttachment: "fixed",
+    //     backgroundPosition: "center center",
+    //     width: '60rem',
+    //     height: '30rem'
+    //   }}>
+      // <div className='introTitle'>
+      //   <h1 className="textformat">Welcome to Pooly,</h1>
+      //   <h1 className="textformat">the inter-city carpool platform for students</h1>
+      // </div>
+
+    // </div>
 
     // <div className="maindiv" style={{ backgroundImage:{Mountains} }}    >
         /* <img src={Mountains} alt="background" /> */
