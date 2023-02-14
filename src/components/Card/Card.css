@@ -5,6 +5,14 @@
   width: 300px;
 }
 
+.listcard{
+	border-style: solid; 
+	border-width: 1px;
+	width : 50vw;
+	display: flex;
+	justify-content: center;
+}
+
 .image{
 	border-radius: 10px;
 	width:100%;

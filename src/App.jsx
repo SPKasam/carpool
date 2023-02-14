@@ -1,6 +1,4 @@
 import './App.css';
-import FromButton from './components/FromButton';
-import ToButton from './components/ToButton';
 import CreatePostBtn from './components/CreatePostBtn';
 import HomeBtn from './components/HomeBtn';
 import NewPost from './components/NewPost/NewPost';
@@ -144,10 +142,6 @@ const App = () => {
     <div>
       <div className = "topright">
         <HomeBtn setPage={setPage}/>
-      </div>
-      <div className = "flex justify-center pt2 pb3">
-        <FromButton city =  {city} setToUTD = {setToUTD}/>
-        <ToButton  city =  {city} setToUTD = {setToUTD}/>
       </div>
         <CityPage city={city} data={data}  toUTD ={toUTD}/>
     </div>
